@@ -1,9 +1,12 @@
 # wordreference
-A python script to get translations from wordreference.com
+A python script to get translations from [wordreference](https://www.wordreference.com)
 
-this script can be imported as a module and used as an API to get worldreference.com information 
+this script can be imported as a module and used as an API to get wordreference translations.
 
 # Usage:
+
+![wr](https://user-images.githubusercontent.com/109042485/182707300-8b9170aa-c602-47cc-98ff-a5ca0b0aa260.png)
+
 ```
 usage: wordreference.py [-h] [-l] [-a] [-s] DICTIONARY_CODE word
 
@@ -23,7 +26,7 @@ options:
 
 To get a list of available dictionaries and their codes:
 ```
-wordreference.py -l
+python wordreference.py -l
 code  :  Dictionary
 -------------------
 enar  :  English-Arabic
@@ -72,8 +75,6 @@ tren  :  Turkish-English
 zhen  :  Chinese-English
 ```
 
-![wr](https://user-images.githubusercontent.com/109042485/182707300-8b9170aa-c602-47cc-98ff-a5ca0b0aa260.png)
-
 # importing as a module
 ```python
 >>> import wordreference as wr
@@ -110,15 +111,19 @@ zhen  :  Chinese-English
 ```
 `define_word` function takes two arguments: a word to translate and dictionary code and it returns a tuple that cantains:
 - a dictionary that contains translations of the given word.
-- a list of links to available audio files that contain pronunciation of the word
+- a list of links to available audio files that contain pronunciation of the word in different accents
 
 `wr.print_available_dictinaries()` gives a list of available dictionary codes
 
 # API output
+**Translations:**
 - **word:** the word in differnt meanings and idioms
 - **definition:** definition of the word in the source language
 - **meanings:** a list of meanings of the word in the target language
 - **examples:** a list of exmaple sentences in the source language and tranlsations when available (sometimes multiple translations of the same sentence are included). Every sentence and its translations are stored in a list os `examples` is a list of lists
 
+**Pronunciation:**
+- list of links to audio files that contains pronunciation
 # Notes
-- this script requires `requests` and `Beautiful Soup`
+- this script requires `requests` and `Beautiful Soup` to work
+- this script uses `Beautiful Soup` to scrape data from [wordreference](https://www.wordreference.com) so it may not work in future if they change things on their website.
