@@ -120,7 +120,7 @@ zhen  :  Chinese-English
 - **word:** the word in differnt meanings and idioms
 - **definition:** definition of the word in the source language
 - **meanings:** a list of meanings of the word in the target language
-- **examples:** a list of exmaple sentences in the source language and tranlsations when available (sometimes multiple translations of the same sentence are included). Every sentence and its translations are stored in a list os `examples` is a list of lists
+- **examples:** a list of exmaple sentences in the source language and tranlsations when available (sometimes multiple translations of the same sentence are included). Every sentence and its translations are stored in a list so `examples` is a list of lists
 
 **Pronunciation:**
 - list of links to audio files that contains pronunciation
